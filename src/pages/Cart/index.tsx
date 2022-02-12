@@ -26,7 +26,8 @@ const Cart = (): JSX.Element => {
     title: product.title,
     priceFormatted: formatPrice(product.price),
     amount: product.amount,
-    subTotal: formatPrice(product.price * product.amount)
+    subTotal: formatPrice(product.price * product.amount),
+    price: product.price
   }))
 
   const total =
@@ -37,11 +38,17 @@ const Cart = (): JSX.Element => {
     )
 
   function handleProductIncrement(product: Product) {
-    // TODO
+    updateProductAmount({
+      productId: product.id, 
+      amount: product.amount + 1
+    })
   }
 
   function handleProductDecrement(product: Product) {
-    // TODO
+    updateProductAmount({
+      productId: product.id, 
+      amount: product.amount - 1
+    })
   }
 
   function handleRemoveProduct(productId: number) {
@@ -61,54 +68,64 @@ const Cart = (): JSX.Element => {
           </tr>
         </thead>
         <tbody>
-          {cartFormatted.map(product => (
-            <tr data-testid="product" key={product.id}>
-              <td>
-                <img src={product.image} alt={product.title} />
-              </td>
-              <td>
-                <strong>{product.title}</strong>
-                <span>{product.priceFormatted}</span>
-              </td>
-              <td>
-                <div>
+          {cartFormatted.map(product => {
+
+            const newProduct = {
+              title: product.title,
+              image: product.image,
+              price: product.price,
+              id: product.id,
+              amount: product.amount
+            }
+
+            return (
+              <tr data-testid="product" key={product.id}>
+                <td>
+                  <img src={product.image} alt={product.title} />
+                </td>
+                <td>
+                  <strong>{product.title}</strong>
+                  <span>{product.priceFormatted}</span>
+                </td>
+                <td>
+                  <div>
+                    <button
+                      type="button"
+                      data-testid="decrement-product"
+                      disabled={product.amount <= 1}
+                      onClick={() => handleProductDecrement(newProduct)}
+                    >
+                      <MdRemoveCircleOutline size={20} />
+                    </button>
+                    <input
+                      type="text"
+                      data-testid="product-amount"
+                      readOnly
+                      value={product.amount}
+                    />
+                    <button
+                      type="button"
+                      data-testid="increment-product"
+                      onClick={() => handleProductIncrement(newProduct)}
+                    >
+                      <MdAddCircleOutline size={20} />
+                    </button>
+                  </div>
+                </td>
+                <td>
+                  <strong>{product.subTotal}</strong>
+                </td>
+                <td>
                   <button
                     type="button"
-                    data-testid="decrement-product"
-                  // disabled={product.amount <= 1}
-                  // onClick={() => handleProductDecrement()}
+                    data-testid="remove-product"
+                  // onClick={() => handleRemoveProduct(product.id)}
                   >
-                    <MdRemoveCircleOutline size={20} />
+                    <MdDelete size={20} />
                   </button>
-                  <input
-                    type="text"
-                    data-testid="product-amount"
-                    readOnly
-                    value={product.amount}
-                  />
-                  <button
-                    type="button"
-                    data-testid="increment-product"
-                  // onClick={() => handleProductIncrement()}
-                  >
-                    <MdAddCircleOutline size={20} />
-                  </button>
-                </div>
-              </td>
-              <td>
-                <strong>{product.subTotal}</strong>
-              </td>
-              <td>
-                <button
-                  type="button"
-                  data-testid="remove-product"
-                // onClick={() => handleRemoveProduct(product.id)}
-                >
-                  <MdDelete size={20} />
-                </button>
-              </td>
-            </tr>
-          ))}
+                </td>
+              </tr>
+          )})}
         </tbody>
       </ProductTable>
 
