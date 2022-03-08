@@ -19,7 +19,7 @@
 ## :rocket: Sobre o desafio
 
 <p align="center">
-  <img src=".github/lunarshoes.png" alt="lunarshoes">
+  <img src=".github/rocketshoes.png" alt="rocketshoes">
 </p>
 
 Nesse desafio o principal objetivo é criar um hook de carrinho de compras. A aplicação tem duas páginas, um componente e um hook para implementar as funcionalidades pedidas nesse desafio:
