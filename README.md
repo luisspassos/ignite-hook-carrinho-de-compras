@@ -24,11 +24,12 @@
 
 In this challenge the main objective is to create a shopping cart hook. The application has two pages, one component and one hook to implement the features requested in this challenge:
 
-- Adicionar um novo produto ao carrinho;
-- Remover um produto do carrinho;
-- Alterar a quantidade de um produto no carrinho;
-- Cálculo dos preços sub-total e total do carrinho;
-- Validação de estoque;
+- Add a new product to cart;
+- Remove a product from cart;
+- Change the quantity of a product in the cart;
+- Calculation of subtotal and total cart prices;
+- Inventory validation;
+
 - Exibição de mensagens de erro;
 - Entre outros.
 
