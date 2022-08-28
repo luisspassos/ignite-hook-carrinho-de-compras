@@ -1,7 +1,7 @@
 <img src=".github/ignite.png" alt="Ignite" >
 
 <h3 align="center">
-  Desafio 03 - Criando um hook de carrinho de compras
+  Challenge 03 - Creating a shopping cart hook
 </h3>
 
 <p align="center">
@@ -16,13 +16,13 @@
 
 <br>
 
-## :rocket: Sobre o desafio
+## :rocket: About the challenge
 
 <p align="center">
   <img src=".github/rocketshoes.png" alt="rocketshoes">
 </p>
 
-Nesse desafio o principal objetivo é criar um hook de carrinho de compras. A aplicação tem duas páginas, um componente e um hook para implementar as funcionalidades pedidas nesse desafio:
+In this challenge the main objective is to create a shopping cart hook. The application has two pages, one component and one hook to implement the features requested in this challenge:
 
 - Adicionar um novo produto ao carrinho;
 - Remover um produto do carrinho;
