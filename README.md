@@ -41,11 +41,14 @@ In this challenge the main objective is to create a shopping cart hook. The appl
 git clone https://github.com/luisspassos/rocketshoes
 # or use the download option.
 
-# Enter the web folder with
+# Enter the folder with
 cd rocketshoes
 
 # Install the dependencies
 yarn install
+
+# Start the fake API
+yarn server
 
 # Run the development server
 yarn start
