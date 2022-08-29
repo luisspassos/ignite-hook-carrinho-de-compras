@@ -29,37 +29,36 @@ In this challenge the main objective is to create a shopping cart hook. The appl
 - Change the quantity of a product in the cart;
 - Calculation of subtotal and total cart prices;
 - Inventory validation;
-
-- Exibição de mensagens de erro;
-- Entre outros.
+- Error message display;
+- Among others.
 
 <br>
 
-## :wrench: Instalação e uso
+## :wrench: Installation and use
 
 ```bash
-# Abra um terminal e copie este repositório com o comando
+# Open a terminal and copy this repository with the command
 git clone https://github.com/luisspassos/rocketshoes
-# ou use a opção de download.
+# or use the download option.
 
-# Entre na pasta com 
+# Enter the web folder with
 cd rocketshoes
 
-# Instale as dependências
+# Install the dependencies
 yarn install
 
-# Rode a aplicação
+# Run the development server
 yarn start
 ```
 
 <br>
 
-## :memo: Licença
+## :memo: License
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](/LICENSE) file for more details.
 
 ---
 
-Feito com :purple_heart: by [Luís Passos](https://github.com/luisspassos)
+Made with :purple_heart: by [Luís Passos](https://github.com/luisspassos)
 
 [![Gmail Badge](https://img.shields.io/badge/-luis.passos013@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:luis.passos013@gmail.com)](mailto:luis.passos013@gmail.com)
